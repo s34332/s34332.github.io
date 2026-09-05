@@ -1,0 +1,843 @@
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    background: #ffffff;
+    color: #222222;
+    line-height: 1.8;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.nav-container {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #9b0000;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff 55%,
+            #f7f7f7 55%
+        );
+}
+
+.hero-container {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9b0000;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.2;
+
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #9b0000;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: #666666;
+
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 430px;
+    margin-left: auto;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow:
+        20px 20px 0 #eeeeee;
+}
+
+.hero-image img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #9b0000;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background: #6f0000;
+}
+
+.outline-btn {
+    border: 1px solid #9b0000;
+    color: #9b0000;
+}
+
+.outline-btn:hover {
+    background: #9b0000;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section {
+    padding: 100px 0;
+}
+
+.gray-section {
+    background: #f7f7f7;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #9b0000;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 30px;
+}
+
+.about-card {
+    padding: 35px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+.about-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 23px;
+}
+
+.info-list p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-list strong {
+    color: #9b0000;
+}
+
+
+/* =====================================================
+   UNIVERSITY
+===================================================== */
+
+.university-section {
+    padding: 100px 0;
+
+    background: #9b0000;
+    color: white;
+}
+
+.university-content {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.university-section .small-title {
+    color: #ffffff;
+}
+
+.university-section h2 {
+    font-size: 48px;
+
+    margin: 15px 0;
+}
+
+.university-section p {
+    color: #eeeeee;
+}
+
+.faculty-box {
+    padding: 35px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 12px;
+}
+
+.faculty-box p {
+    font-size: 14px;
+}
+
+.faculty-box h3 {
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.faculty-box span {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   INTEREST
+===================================================== */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.interest-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.08);
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #9b0000;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-grid,
+.sport-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.experience-image img,
+.sport-image img {
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.experience-content h3,
+.sport-content h3 {
+    font-size: 30px;
+
+    margin: 15px 0;
+}
+
+.experience-content li {
+    margin-left: 20px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 5px 14px;
+
+    background: #eeeeee;
+
+    color: #9b0000;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    border-radius: 30px;
+}
+
+.highlight {
+    margin-top: 20px;
+
+    color: #9b0000;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   SPORTS
+===================================================== */
+
+.achievement-box {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #f7f7f7;
+
+    border-left: 4px solid #9b0000;
+}
+
+.achievement-box strong {
+    color: #9b0000;
+}
+
+.achievement-box small {
+    color: #777777;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill {
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+}
+
+.skill p {
+    color: #9b0000;
+
+    letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header {
+    padding: 110px 0;
+
+    background: #9b0000;
+
+    color: #ffffff;
+}
+
+.page-header p {
+    letter-spacing: 3px;
+
+    font-size: 13px;
+}
+
+.page-header h1 {
+    font-size: 55px;
+
+    margin: 10px 0;
+}
+
+.page-header span {
+    color: #eeeeee;
+}
+
+
+/* =====================================================
+   CERTIFICATE FEATURE
+===================================================== */
+
+.certificate-feature {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.certificate-image {
+    background: #f7f7f7;
+
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+.certificate-info h3 {
+    font-size: 30px;
+
+    margin: 15px 0;
+}
+
+.detail {
+    margin-top: 25px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.detail p {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =====================================================
+   CERTIFICATE GRID
+===================================================== */
+
+.certificate-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.certificate-card {
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.08);
+}
+
+.certificate-card img {
+    aspect-ratio: 16 / 10;
+
+    object-fit: contain;
+
+    background: #eeeeee;
+}
+
+.certificate-text {
+    padding: 25px;
+}
+
+.certificate-text span {
+    font-size: 12px;
+
+    color: #9b0000;
+
+    letter-spacing: 2px;
+}
+
+.certificate-text h3 {
+    margin: 8px 0;
+}
+
+.certificate-text small {
+    color: #777777;
+}
+
+
+/* =====================================================
+   SPORTS AWARD
+===================================================== */
+
+.sports-award {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.sports-award-image img {
+    max-height: 500px;
+
+    object-fit: contain;
+
+    background: #f7f7f7;
+
+    border-radius: 12px;
+}
+
+.sports-award-content h3 {
+    font-size: 32px;
+
+    margin: 15px 0;
+}
+
+.award-detail {
+    margin-top: 25px;
+}
+
+.award-detail p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-section {
+    padding: 70px 0;
+
+    background: #9b0000;
+
+    color: #ffffff;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    text-align: center;
+}
+
+.stat {
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 50px;
+
+    line-height: 1;
+}
+
+.stat span {
+    color: #eeeeee;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    padding: 50px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+}
+
+.footer-content p {
+    color: #aaaaaa;
+}
+
+.copyright {
+    padding: 15px;
+
+    text-align: center;
+
+    border-top: 1px solid #333333;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .hero-container,
+    .university-content,
+    .about-grid,
+    .experience-grid,
+    .sport-grid,
+    .certificate-feature,
+    .sports-award {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-image {
+        margin: auto;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+    .stat {
+        border-right: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .university-section h2 {
+        font-size: 35px;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
