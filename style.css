@@ -67,6 +67,8 @@ a {
 nav {
     display: flex;
     gap: 35px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -799,6 +801,13 @@ footer {
 
 
 @media (max-width: 600px) {
+
+    .nav-container {
+        height: auto;
+        min-height: 75px;
+        padding: 12px 0;
+        align-items: flex-start;
+    }
 
     nav {
         gap: 15px;
